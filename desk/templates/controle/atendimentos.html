@@ -1,0 +1,11 @@
+<h1>Atendimentos</h1>
+{% for atendimento in object_list %}
+    {% for chamado in atendimento.chamadoAtribuido %}
+        <h2>* Chamado {{ chamado.id}}</h2>
+        <h2>Status: {{ chamado.estado}}</h2>
+        <h2>    Atendimento:</h2>
+        {% for  desc in atendimento.chamadoAtribuido.all %}
+        <h2>-[{{ desc.dataAtendimento}}]{{desc.descricao}}. ({{desc.funcionarioAtend}})</h2>
+        {{ % endfor %}}
+    {% endfor %}
+{% endfor %}

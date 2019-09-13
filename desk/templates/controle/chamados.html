@@ -1,0 +1,9 @@
+<h1>Chamaditos Abertos</h1>
+{% for chamado in object_list %}
+    {% if chamado.estado.estadoChamado == "Aberto" %}
+        <div>
+            <h2>* Chamado-> {{chamado.id}}</h2>
+            <br>Status: {{chamado.estado}}</br>
+        </div>
+    {% endif%}
+{% endfor %}
