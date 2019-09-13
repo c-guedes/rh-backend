@@ -2,4 +2,4 @@
 
 Webservice criado para consumir na aplicação mobile de RH
 
-Feita em Python utilizando o rest_framework
+Feita em Python utilizando o Django e rest_framework
